@@ -1,0 +1,36 @@
+{% extends "core/base.html" %}
+{% load renderfilters %}
+{% load static %}
+{% block content %}
+<div>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Status</h1>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Label</th>
+                    <th scope="col">Name</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in entries %}
+                    <tr>
+                        <th scope="row">{{entry.id}}</th>
+                        <td>{{ entry.label }}</td>
+                        <td>{{ entry.name }} </td>
+                        <td><a class="btn btn-success btn-sm" href="#" role="button">Edit</a></td>
+                        <td><a class="btn btn-danger btn-sm" href="#" role="button">Delete</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</div>
+{% endblock %}

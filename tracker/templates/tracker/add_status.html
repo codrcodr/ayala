@@ -1,0 +1,37 @@
+{% extends "core/base.html" %}
+{% load renderfilters %}
+{% load static %}
+{% block content %}
+<div>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Add Status</h1>
+            <!-- <div class="text-right">
+                <button class="btn btn-success" type="button">Add Status</button>
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filters
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">All</a>
+                        <a class="dropdown-item" href="#">Active</a>
+                        <a class="dropdown-item" href="#">Done</a>
+                        <a class="dropdown-item" href="#">Archived</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                <label class="mt-3">{{field.label}}</label>
+                {{field |add_class:"form-control"}}
+            {% endfor %}
+            <button class="btn btn-success mt-4" type="submit">Add Status</button>
+        </form>
+        
+    </div>
+</div>
+{% endblock %}

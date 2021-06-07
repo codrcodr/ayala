@@ -1,0 +1,63 @@
+{% extends "core/base.html" %}
+{% load renderfilters %}
+{% load static %}
+{% block content %}
+<div>
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Projects</h1>
+            <div class="text-right">
+                <button class="btn btn-success" type="button">Add Project</button>
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filters
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">All</a>
+                        <a class="dropdown-item" href="#">Active</a>
+                        <a class="dropdown-item" href="#">Done</a>
+                        <a class="dropdown-item" href="#">Archived</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://loremflickr.com/cache/resized/65535_50756460131_3feb9da46a_z_640_360_nofilter.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-title">Card title</h6>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://loremflickr.com/cache/resized/65535_50756460131_3feb9da46a_z_640_360_nofilter.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-title">Card title</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://loremflickr.com/cache/resized/65535_50756460131_3feb9da46a_z_640_360_nofilter.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-title">Card title</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="https://loremflickr.com/cache/resized/65535_50756460131_3feb9da46a_z_640_360_nofilter.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-title">Card title</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
